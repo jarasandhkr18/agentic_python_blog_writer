@@ -26,8 +26,7 @@ def save_blog_to_md(blog_content: str, topic: str, output_dir: str) -> str:
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(blog_content)
 
-    
-    print(f"✅ Blog saved as {file_path}")
+    print(f"Blog saved as {file_path}")
     return file_path
 
 def save_metadata_to_json(metadata: dict, output_dir: str) -> str:
@@ -52,7 +51,7 @@ def save_metadata_to_json(metadata: dict, output_dir: str) -> str:
     with open(file_path, "w") as json_file:
         json.dump(metadata, json_file, indent=4)
 
-    print(f"✅ Metadata saved as {file_path}")
+    print(f"Metadata saved as {file_path}")
     return file_path
 
 def export_blog_and_metadata(blog_content: str, metadata: dict, output_dir: str) -> dict:
