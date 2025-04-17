@@ -15,8 +15,8 @@ import json
 
 load_dotenv()
 
-st.set_page_config(page_title="🧠 Agentic Python Blog Writer")
-st.title("🧠 Agentic Python Blog Writer")
+st.set_page_config(page_title="Agentic Python Blog Writer")
+st.title("Agentic Python Blog Writer")
 st.markdown("Generate AI-powered blog posts with SEO metadata.")
 
 option = st.radio("Choose input mode:", ("Single Topic", "Batch Mode"))
@@ -42,25 +42,25 @@ if option == "Single Topic":
                 files = export_blog_and_metadata(blog_md, metadata, output_dir="output")
                 end_time = time.time()
 
-                st.success("✅ Blog generated!")
-                st.markdown(f"⏱️ Time taken: {round(end_time - start_time, 2)} seconds")
-                st.markdown(f"📚 Readability Grade: {textstat.flesch_kincaid_grade(blog_md)}")
-                st.markdown(f"💬 Quote of the Day: \n> {get_random_quote()}")
-                st.markdown(f"📄 Markdown File: `{files['blog_file']}`")
-                st.markdown(f"📊 Metadata JSON: `{files['metadata_file']}`")
+                st.success("Blog generated!")
+                st.markdown(f"Time taken: {round(end_time - start_time, 2)} seconds")
+                st.markdown(f"Readability Grade: {textstat.flesch_kincaid_grade(blog_md)}")
+                st.markdown(f"Quote of the Day: \n> {get_random_quote()}")
+                st.markdown(f"Markdown File: `{files['blog_file']}`")
+                st.markdown(f"Metadata JSON: `{files['metadata_file']}`")
 
-                with st.expander("📝 View Blog Markdown"):
+                with st.expander("View Blog Markdown"):
                     st.markdown(blog_md)
 
-                with st.expander("🔍 SEO Metadata"):
+                with st.expander("SEO Metadata"):
                     st.json(metadata)
 
                 # Offer download buttons
                 with open(files['blog_file'], "r", encoding="utf-8") as f:
-                    st.download_button("⬇️ Download Blog (.md)", f.read(), file_name=os.path.basename(files['blog_file']))
+                    st.download_button("Download Blog (.md)", f.read(), file_name=os.path.basename(files['blog_file']))
 
                 with open(files['metadata_file'], "r", encoding="utf-8") as f:
-                    st.download_button("⬇️ Download Metadata (.json)", f.read(), file_name=os.path.basename(files['metadata_file']))
+                    st.download_button("Download Metadata (.json)", f.read(), file_name=os.path.basename(files['metadata_file']))
 
 elif option == "Batch Mode":
     batch_input = st.text_area("Paste or type one topic per line:", height=200)
@@ -72,7 +72,7 @@ elif option == "Batch Mode":
             blog_files = []
 
             for topic in topics:
-                st.markdown(f"---\n### 🔧 Processing: `{topic}`")
+                st.markdown(f"---\n### Processing: `{topic}`")
                 subtopics = analyze_topic(topic)[:2]
                 context = gather_context(topic, subtopics)
                 blog_md = generate_blog(topic, subtopics, context, tone)
@@ -98,13 +98,13 @@ elif option == "Batch Mode":
 
                 blog_files.append((metadata['title'], blog_file, meta_file))
 
-                st.success(f"✅ Done: {metadata['title']}")
+                st.success(f"Done: {metadata['title']}")
 
             st.markdown("---")
-            st.markdown("### 📦 Download All Files")
+            st.markdown("Download All Files")
 
             for title, md_path, json_path in blog_files:
                 with open(md_path, "r", encoding="utf-8") as f:
-                    st.download_button(f"⬇️ Download {title} (.md)", f.read(), file_name=os.path.basename(md_path))
+                    st.download_button(f"Download {title} (.md)", f.read(), file_name=os.path.basename(md_path))
                 with open(json_path, "r", encoding="utf-8") as f:
-                    st.download_button(f"⬇️ Download {title} Metadata (.json)", f.read(), file_name=os.path.basename(json_path))
+                    st.download_button(f"Download {title} Metadata (.json)", f.read(), file_name=os.path.basename(json_path))
