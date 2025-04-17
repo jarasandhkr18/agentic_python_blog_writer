@@ -1,25 +1,24 @@
-
-# 🧠 Agentic Python Blog Writer
+# Agentic Python Blog Writer
 
 A smart, agent-based Python application that generates a complete SEO-optimized blog post using Gemini and public APIs — available via CLI or web interface.
 
 ---
 
-## ✨ Features
+## Features
 
-- 🧠 AI-generated blog content using Gemini
-- 🌍 Real-time news injection using NewsData.io
-- 🔍 Semantic SEO keywords via Datamuse
-- 💬 Inspirational quote from Quotable.io
-- ✍️ Tone customization (e.g. educational, formal, creative)
-- 📄 Exports blog in .md and metadata in .json
-- 📚 Calculates Flesch-Kincaid readability score
-- 🔁 Batch mode for generating multiple blogs at once
-- 🌐 Streamlit web interface for non-technical use
+- AI-generated blog content using Gemini
+- Real-time news injection using NewsData.io
+- Semantic SEO keywords via Datamuse
+- Inspirational quote from Quotable.io
+- Tone customization (e.g. educational, formal, creative)
+- Exports blog in .md and metadata in .json
+- Calculates Flesch-Kincaid readability score
+- Batch mode for generating multiple blogs at once
+- Streamlit web interface for non-technical use
 
 ---
 
-## 🚀 How to Run (CLI)
+## How to Run (CLI)
 
 Basic command:
 
@@ -33,12 +32,12 @@ Example:
 python main.py "How Python is used in AI" --tone educational
 ```
 
-✅ Supported tone options:  
+Supported tone options:  
 educational, formal, creative, conversational, technical, persuasive, humorous, inspirational
 
 ---
 
-## 🔁 Batch Mode (Multiple Topics)
+## Batch Mode (Multiple Topics)
 
 Create a text file (e.g. topics.txt) with one blog topic per line:
 
@@ -56,13 +55,13 @@ python main.py --batch topics.txt --tone formal
 
 ---
 
-## 📚 Readability Score
+## Readability Score
 
-Each blog is analyzed for reading difficulty using the Flesch-Kincaid Grade Level, shown in the CLI summary (e.g., “📚 Readability Grade: 8.2”).
+Each blog is analyzed for reading difficulty using the Flesch-Kincaid Grade Level, shown in the CLI summary (e.g., “Readability Grade: 8.2”).
 
 ---
 
-## 🌐 Run via Streamlit Web App
+## Run via Streamlit Web App
 
 Use a friendly web interface to generate blogs without touching code.
 
@@ -81,7 +80,7 @@ You can:
 
 ---
 
-## 🔧 Setup Instructions
+## Setup Instructions
 
 1. Clone the repo:
 
@@ -110,11 +109,11 @@ GEMINI_API_KEY=your_gemini_api_key_here
 NEWSDATA_API_KEY=your_newsdata_api_key_here
 ```
 
-(🔓 No key required for Datamuse or Quotable.io)
+(No key required for Datamuse or Quotable.io)
 
 ---
 
-## 📁 Example Output Files
+## Example Output Files
 
 Markdown file:  
 output/2025-04-17-python-in-ai-how-it-powers-artificial-intelligence-machine-learning.md
@@ -124,7 +123,7 @@ output/2025-04-17-metadata.json
 
 ---
 
-## 🧪 APIs Used
+## APIs Used
 
 - [Gemini (Google AI)](https://ai.google.dev)
 - [NewsData.io](https://newsdata.io)
@@ -133,4 +132,3 @@ output/2025-04-17-metadata.json
 - [textstat (for readability)](https://pypi.org/project/textstat/)
 
 ---
-
