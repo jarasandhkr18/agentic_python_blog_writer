@@ -26,7 +26,7 @@ def gather_context(topic: str, subtopics: list) -> dict:
     query = quote(topic)
 
     try:
-        print("🌐 Fetching recent news...")
+        print("Fetching recent news...")
         url = f"https://newsdata.io/api/1/news?apikey={NEWSDATA_API_KEY}&q={query}&language=en"
         response = requests.get(url)
         response.raise_for_status()
@@ -43,6 +43,6 @@ def gather_context(topic: str, subtopics: list) -> dict:
             ]
 
     except Exception as e:
-        print(f"⚠️ NewsData fetch failed: {e}")
+        print(f"NewsData fetch failed: {e}")
 
     return context_data
