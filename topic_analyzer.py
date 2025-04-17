@@ -1,4 +1,3 @@
-#Topic Analyzer.py
 import re
 def analyze_topic(topic: str) -> list:
     """
