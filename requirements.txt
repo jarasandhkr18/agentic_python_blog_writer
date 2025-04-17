@@ -1,0 +1,22 @@
+# Core tools
+requests
+aiohttp
+python-dotenv
+tenacity
+tqdm
+
+# Google Gemini (via Vertex AI or Generative SDK)
+google-generativeai
+
+# CLI / User Experience
+rich
+
+# SEO & Readability (optional bonus features)
+textstat
+
+# For research context (optional)
+wikipedia
+duckduckgo-search
+
+# Optional: for web interface bonus
+streamlit
