@@ -12,7 +12,7 @@ def slugify(title: str) -> str:
     return re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')
 
 def generate_seo_metadata(topic: str, blog_md: str) -> dict:
-    print("🧠 Generating SEO metadata...")
+    print("Generating SEO metadata...")
 
     prompt = f"""Generate SEO metadata for a blog titled '{topic}'.\nRespond in the format:\n\nTitle: [Your SEO-friendly title]\nDescription: [A meta description under 160 characters]\nKeywords: [Comma-separated keywords or a list]"""
 
