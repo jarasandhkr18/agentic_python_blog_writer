@@ -1,3 +1,0 @@
-arr=['99','994545']
-arr.sort(reverse=True)  
-print(arr)
