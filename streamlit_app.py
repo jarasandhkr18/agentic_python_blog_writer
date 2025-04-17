@@ -108,5 +108,3 @@ elif option == "Batch Mode":
                     st.download_button(f"⬇️ Download {title} (.md)", f.read(), file_name=os.path.basename(md_path))
                 with open(json_path, "r", encoding="utf-8") as f:
                     st.download_button(f"⬇️ Download {title} Metadata (.json)", f.read(), file_name=os.path.basename(json_path))
-
-            # Optional: clean up temp files at the end of the app session (manually or with on_event)
