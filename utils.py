@@ -1,5 +1,3 @@
-# utils.py
-
 import asyncio
 import time
 from functools import wraps
