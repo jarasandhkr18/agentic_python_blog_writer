@@ -1,4 +1,3 @@
-# seo_agent.py
 import re
 import math
 from gemini_client import call_gemini
