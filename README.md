@@ -134,4 +134,3 @@ output/2025-04-17-metadata.json
 
 ---
 
-Feel free to fork and build your own AI writing agents 🚀
