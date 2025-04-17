@@ -86,8 +86,8 @@ You can:
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/your-username/agentic-python-blog-writer.git
-cd agentic-python-blog-writer
+git clone https://github.com/jarasandhkr18/agentic_python_blog_writer.git
+cd agentic_python_blog_writer
 ```
 
 2. Create a virtual environment:
