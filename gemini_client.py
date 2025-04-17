@@ -1,5 +1,3 @@
-# gemini_client.py
-
 import google.generativeai as genai
 import os
 import time
