@@ -43,7 +43,6 @@ Context: {news_context if news_context else 'N/A'}"""
 Tone: {tone}.
 Context: {news_context if news_context else 'N/A'}"""
         section = call_gemini(section_prompt)
-        # section = section.lstrip("#").strip()  # removes any accidental ## at the beginning
         section = clean_text(section.lstrip("#").strip())
         blog_md += f"## {heading}\n\n{section}\n\n"
 
@@ -53,6 +52,6 @@ Tone: {tone}.
 Context: {news_context if news_context else 'N/A'}"""
     conclusion = call_gemini(conclusion_prompt)
     quote = get_random_quote()
-    blog_md += f"## Conclusion\n\n{conclusion}\n\n> 💡 Quote of the Day: \"{quote}\"\n"
+    blog_md += f"## Conclusion\n\n{conclusion}\n\n> Quote of the Day: \"{quote}\"\n"
 
     return blog_md
